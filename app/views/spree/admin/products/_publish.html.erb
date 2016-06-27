@@ -1,0 +1,11 @@
+<div data-hook="admin_product_form_price">
+  <%= f.field_container :publish, class: ['form-group'] do %>
+      <div class="radio">
+        <%= f.label :publish  do %>
+            <%= f.check_box :publish %>
+            <%= Spree.t('activerecord.attributes.spree/product.publish') %>
+        <% end %>
+      </div>
+      <%= f.error_message_on :publish %>
+  <% end %>
+</div>
