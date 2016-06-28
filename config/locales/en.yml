@@ -4,4 +4,4 @@ en:
     activerecord:
       attributes:
         spree/product:
-          publish: "Publish"
+          published: "Published"

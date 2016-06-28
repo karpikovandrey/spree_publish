@@ -424,14 +424,14 @@ ActiveRecord::Schema.define(version: 20160627110618) do
     t.boolean  "promotionable",        default: true
     t.string   "meta_title"
     t.datetime "discontinue_on"
-    t.boolean  "publish",              default: false
+    t.boolean  "published",            default: false
   end
 
   add_index "spree_products", ["available_on"], name: "index_spree_products_on_available_on", using: :btree
   add_index "spree_products", ["deleted_at"], name: "index_spree_products_on_deleted_at", using: :btree
   add_index "spree_products", ["discontinue_on"], name: "index_spree_products_on_discontinue_on", using: :btree
   add_index "spree_products", ["name"], name: "index_spree_products_on_name", using: :btree
-  add_index "spree_products", ["publish"], name: "index_spree_products_publish", using: :btree
+  add_index "spree_products", ["published"], name: "index_products_on_published", using: :btree
   add_index "spree_products", ["shipping_category_id"], name: "index_spree_products_on_shipping_category_id", using: :btree
   add_index "spree_products", ["slug"], name: "index_spree_products_on_slug", unique: true, using: :btree
   add_index "spree_products", ["tax_category_id"], name: "index_spree_products_on_tax_category_id", using: :btree

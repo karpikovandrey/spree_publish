@@ -1,9 +1,8 @@
 Spree::Product.class_eval do
-  def self.publish
-    where(publish: true)
-  end
+
+  scope :published, -> { where(published: true) }
 
   def self.spree_base_scopes
-    publish
+    published
   end
 end
